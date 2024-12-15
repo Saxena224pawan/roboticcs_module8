@@ -1,0 +1,60 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/robots/adept/pioneer3/protos/Pioneer3dx.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/devices/sick/protos/SickLms291.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/solids/protos/SolidBox.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5753596767835424 0.578704352275236 0.5779814140517299 2.0884188567214292
+  position 0.027698706843242816 0.23825927765863897 9.355895149516309
+}
+SolidBox {
+  translation 1.35366 0.290415 0.29
+  size 0.7 0.7 0.7
+}
+SolidBox {
+  translation -1.05867 -1.19786 0.29
+  rotation 0 0 1 0.261799
+  name "box(1)"
+  size 0.7 0.7 0.7
+}
+SolidBox {
+  translation 0.97519 -1.42372 0.29
+  name "box(2)"
+  size 0.7 0.7 0.7
+}
+SolidBox {
+  translation -1.12853 0.967801 0.29
+  rotation 0 0 1 -0.785395307179586
+  name "box(3)"
+  size 0.7 0.7 0.7
+}
+TexturedBackground {
+  luminosity 0
+  skybox FALSE
+}
+TexturedBackgroundLight {
+  castShadows FALSE
+}
+DEF RectangleArena RectangleArena {
+  floorSize 5 5
+  floorTileSize 2 2
+  wallHeight 0.5
+}
+DEF Pioneer3dx Pioneer3dx {
+  translation 0.788781 1.07183 0.0975
+  rotation 0 0 -1 2.87979
+  controller "mapping_controller"
+  supervisor TRUE
+  extensionSlot [
+    SickLms291 {
+      translation 0 0 0.21
+      resolution 41
+    }
+  ]
+}
