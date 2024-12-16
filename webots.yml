@@ -1,0 +1,3 @@
+publish: false
+type: benchmark
+dockerCompose:theia:controllers/mapping_controller/
